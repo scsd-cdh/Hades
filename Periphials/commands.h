@@ -1,0 +1,41 @@
+/*
+ * Commands.h
+ *
+ * Created: 2024-08-24 2:52:05 PM
+ *  Author: Srira
+ */ 
+
+
+#ifndef COMMANDS_H_
+#define COMMANDS_H_
+
+
+// Structure for BPL
+typedef enum {
+	 BPL_SYSTEM_STATUS = 0x01,
+	 BPL_HEALTH_CHECK = 0x02, 
+	 BPL_TEMPERATURE = 0x03, 
+	 BPL_TELECOMMAND_ACKNOWLEDGE = 0x06
+}BPL_COMMAND;
+
+// Structure for PDS 
+typedef enum {
+	 PDS_SYSTEM_STATUS = 0x01,
+	 PDS_HEALTH_CHECK = 0x02,
+	 PDS_REBOOT = 0x03,
+	 PDS_CONVERTER_MONITOR = 0x05,
+	 PDS_TELECOMMAND_ACKNOWLEDGE = 0x06
+} PDS_COMMAND;
+
+// Structure for BMS
+typedef enum {
+	 BMS_SYSTEM_STATUS = 0x01,
+	 BMS_HEALTH_CHECK = 0x02,
+	 BMS_FLAGS = 0x03,
+	 BMS_POWER_STATUS = 0x04,
+	 BMS_HEATER_CONTROLLER = 0x05,
+	 BMS_TELECOMMAND_ACKNOWLEDGE = 0x06
+} BMS_COMMAND;
+
+
+#endif /* COMMANDS_H_ */

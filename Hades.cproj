@@ -30,15 +30,15 @@
     <EraseKey />
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
     <Compiler>gcc</Compiler>
     <configurator>AtmelStart</configurator>
@@ -1106,6 +1106,33 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Periphials\BMS\bms.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\BMS\bms.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\BPL\bpl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\BPL\bpl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\commands.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\I2C.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\PDS\pds.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Periphials\PDS\pds.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Config\" />
@@ -1139,6 +1166,10 @@
     <Folder Include="hpl\wdt\" />
     <Folder Include="hpl\xdmac\" />
     <Folder Include="hri\" />
+    <Folder Include="Periphials" />
+    <Folder Include="Periphials\BMS" />
+    <Folder Include="Periphials\BPL" />
+    <Folder Include="Periphials\PDS" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device_Startup\samv71q21b_flash.ld">
