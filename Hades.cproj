@@ -1112,10 +1112,10 @@
     <Compile Include="Periphials\BMS\bms.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Periphials\BPL\bpl.c">
+    <Compile Include="Periphials\Backplane\backplane.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Periphials\BPL\bpl.h">
+    <Compile Include="Periphials\Backplane\backplane.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Periphials\commands.h">
@@ -1168,7 +1168,7 @@
     <Folder Include="hri\" />
     <Folder Include="Periphials" />
     <Folder Include="Periphials\BMS" />
-    <Folder Include="Periphials\BPL" />
+    <Folder Include="Periphials\Backplane" />
     <Folder Include="Periphials\PDS" />
   </ItemGroup>
   <ItemGroup>
