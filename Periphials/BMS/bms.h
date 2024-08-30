@@ -10,12 +10,27 @@
 #define BMS_H_
 
 /* Libraries */
-#include "../I2C.h"
+// C Libraries
+#include <stdbool.h>
+#include <stdlib.h>
 
-/* Constants/Definitions */
-#define BMS_ADDRESS 0x02
+// Header Files
+#include "../I2C.h"
+#include "../Commands.h"
+
+/* Structure */
+typedef struct{
+	int16_t ADDRESS;
+	struct io_descriptor *DEVICE;
+	BMS_COMMAND *COMMAND;
+} BMS;
+
+// Global Variable
+bool bms;
+BMS *bmsPtr;
 
 // Tasks
+void initBMS();
 void connectToBMS();
 void BMSSystemStatus();
 void BMSHealthCheck();
