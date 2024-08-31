@@ -24,9 +24,11 @@ int16_t getSlaveAddress(struct i2c_m_sync_desc *i2c); // Return Slave Address
 
 // Functions through I2C
 int32_t I2CConnect(struct io_descriptor *I2CDevice, int16_t slaveAddress);
-int32_t I2CSendCommand(struct io_descriptor *I2CDevice, uint8_t command, int32_t length);
-int32_t I2CWriteCommand(struct io_descriptor *I2CDevice, uint8_t* command, int32_t length);
-uint8_t I2CReadLastCommand(struct io_descriptor *I2CDevice, int length);
+int32_t I2CSendCommand(struct io_descriptor *I2CDevice, uint8_t *command, int32_t length);
+
+
+/*int32_t I2CWriteCommand(struct io_descriptor *I2CDevice, uint8_t* command, int32_t length);
+uint8_t I2CReadLastCommand(struct io_descriptor *I2CDevice, int length);*/
 
 
 

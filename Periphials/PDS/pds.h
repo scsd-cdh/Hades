@@ -9,25 +9,32 @@
 #ifndef PDS_H_
 #define PDS_H_
 
+
 /* Libraries */
 // C Libraries
 #include <stdbool.h>
 #include <stdlib.h>
 
+#define PDS_Addr 0x01
+
+
 // Header Files
 #include "../I2C.h"
 #include "../Commands.h"
 
-/* Structure */
-typedef struct{
-	int16_t ADDRESS;
-	struct io_descriptor *DEVICE;
-	PDS_COMMAND *COMMAND;
-} PDS;
+enum PDS_COMMAND{
+	PDS_SYSTEM_STATUS = 0x00,
+	PDS_HEALTH_CHECK = 0x01,
+	PDS_REBOOT = 0x02,
+	PDS_CONVERTER_MONITOR = 0x03,
+	PDS_ACKNOWLEDGE = 0x04
+};
+
+struct io_descriptor *PDS_descriptor;
+
 
 // Global Variable
 bool pds;
-PDS *pdsPtr;
 
 
 // Methods

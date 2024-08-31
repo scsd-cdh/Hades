@@ -1118,9 +1118,6 @@
     <Compile Include="Periphials\Backplane\backplane.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Periphials\commands.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Periphials\I2C.c">
       <SubType>compile</SubType>
     </Compile>

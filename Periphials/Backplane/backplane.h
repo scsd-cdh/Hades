@@ -16,21 +16,22 @@
 
 // Header Files
 #include "../I2C.h"
-#include "../Commands.h"
+#define BACKPLANE_Addr 0x00
 
-/* Structure */
-typedef struct{
-	int16_t ADDRESS;
-	struct io_descriptor *DEVICE;
-	BACKPLANE_COMMAND *COMMAND;
-} BACKPLANE;
+
+enum BACKPLANE_COMMAND{
+	BPL_SYSTEM_STATUS = 0x01,
+	BPL_HEALTH_CHECK = 0x02,
+	BPL_TEMPERATURE = 0x03,
+	BPL_ACKNOWLEDGE = 0x06,
+};
+
+struct io_descriptor *backplane_descriptor;
 
 // Global Variable
 bool backplane;
-BACKPLANE *backplanePtr;
 
 // Methods
-void initBackplane();
 void connectToBackplane();
 void BackplaneSystemStatus();
 void BackplaneHealthCheck();
